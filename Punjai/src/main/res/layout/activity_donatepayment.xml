@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/in_name"
+        android:layout_width="284dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginBottom="27dp"
+        android:ems="10"
+        android:hint="@string/name"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/textView16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="102dp"
+        android:layout_height="49dp"
+        android:layout_marginBottom="70dp"
+        android:fontFamily="@font/poppins_bold"
+        android:background="@color/colorPrimary"
+        android:text="@string/submit"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="273dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginBottom="34dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="@string/donate_for_unicef"
+        android:textColor="@android:color/black"
+        android:textSize="27dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView15"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="82dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginBottom="26dp"
+        android:fontFamily="@font/poppins"
+        android:text="@string/name"
+        android:textSize="20dp"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toTopOf="@+id/in_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginBottom="32dp"
+        android:text="@string/amount"
+        android:textSize="20dp"
+        android:fontFamily="@font/poppins"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toTopOf="@+id/Amointg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/in_name" />
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginBottom="21dp"
+        android:text="@string/payment_method"
+        android:textSize="20dp"
+        android:textColor="@android:color/black"
+        android:fontFamily="@font/poppins"
+        app:layout_constraintBottom_toTopOf="@+id/Paymentg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Amointg" />
+
+    <RadioGroup
+        android:id="@+id/Amointg"
+        android:layout_width="321dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginBottom="34dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/textView23"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView16">
+
+
+        <RadioButton
+            android:id="@+id/fivethb"
+            android:layout_width="105dp"
+            android:layout_height="wrap_content"
+            android:text="500"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioButton
+            android:id="@+id/tenthb"
+            android:layout_width="107dp"
+            android:layout_height="wrap_content"
+            android:text="1000" />
+
+        <RadioButton
+            android:id="@+id/twentythb"
+            android:layout_width="99dp"
+            android:layout_height="wrap_content"
+            android:text="2000" />
+
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/Paymentg"
+        android:layout_width="352dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="69dp"
+        app:layout_constraintBottom_toTopOf="@+id/submit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView23">
+
+        <RadioButton
+            android:id="@+id/credit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_credit_card_black_24dp"
+            android:text="Credit card" />
+
+        <RadioButton
+            android:id="@+id/Bank"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_account_balance_black_24dp"
+            android:text="Online Banking" />
+    </RadioGroup>
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="373dp"
+        android:layout_height="410dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="90dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="43dp"
+        android:background="@drawable/border"
+        app:layout_constraintBottom_toTopOf="@+id/submit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
